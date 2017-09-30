@@ -1,0 +1,27 @@
+<form>
+  <input type="text" bind:value="todo" placeholder="Please input TODO">
+  <button on:click="addTodo(event)">Add</button>
+</form>
+
+<script>
+  export default {
+    data () {
+      return {
+        todo: ''
+      }
+    },
+    methods: {
+      addTodo (e) {
+        e.preventDefault();
+
+        const todos = this.get('todos');
+        const todo = this.get('todo');
+        this.set({todo: ''});
+        if (todo) {
+          todos.unshift(todo);
+          this.set({todos: todos});
+        }
+      }
+    }
+  };
+</script>

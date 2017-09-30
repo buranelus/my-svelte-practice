@@ -1,3 +1,24 @@
 <div>
-  hello
+  <Header />
+  <h3>TODO LIST</h3>
+  <TodoList/>
 </div>
+
+<script>
+  import Header from '@/components/Header'
+  import TodoList from '@/components/TodoList'
+  export default {
+    components: {
+      Header,
+      TodoList
+    }
+  }
+</script>
+
+<style>
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+</style>

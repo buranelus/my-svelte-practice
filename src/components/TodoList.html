@@ -1,0 +1,23 @@
+<div id="TODO">
+  <TodoIn bind:todos/>
+  <ul class="hoge">
+    {{#each todos as todo}}
+    <li>{{ todo }}</li>
+    {{/each}}
+  </ul>
+</div>
+
+<script>
+  import TodoIn from '@/components/TodoIn'
+
+  export default {
+    components: {
+      TodoIn
+    },
+    data () {
+      return {
+        todos: []
+      };
+    }
+  };
+</script>
